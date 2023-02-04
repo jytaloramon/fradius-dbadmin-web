@@ -17,9 +17,15 @@
           <h2 class="text-sm font-bold">Ytalo Ramon</h2>
         </span>
 
-        <span class="mt-2 ml-auto">
+        <span
+          class="absolute ml-[200px] w-8 h-8 p-1 rounded-full bg-green-600 text-center"
+        >
           <a>
-            <font-awesome-icon icon="fa-angle-double-left" color="white" />
+            <font-awesome-icon
+              icon="fa-angle-double-left"
+              size="xs"
+              color="white"
+            />
           </a>
         </span>
       </div>
