@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="w-screen h-screen font-sans">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script lang="ts">
