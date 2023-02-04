@@ -60,3 +60,29 @@ describe('Set property', () => {
     );
   });
 });
+
+describe('Create style', () => {
+  test('create from an empty list', () => {
+    const style = StyleFactory.create([]);
+
+    expect(Object.keys(style).length).toBe(0);
+  });
+
+  test('Create with multiple items', () => {
+    const style = StyleFactory.create(['padding', 'top', 'left']);
+
+    expect(Object.keys(style).length).toBe(3);
+  });
+
+  test('Create with multiple items, check if all have true value', () => {
+    const style = StyleFactory.create(['padding', 'top']);
+
+    expect(style['padding'] && style['top']).toBe(true);
+  });
+
+  test('Create with multiple items, one with empty name', () => {
+    expect(() => StyleFactory.create(['padding', '', 'left'])).toThrowError(
+      PropetyValidationBaseError
+    );
+  });
+});
