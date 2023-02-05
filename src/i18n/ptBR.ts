@@ -4,6 +4,8 @@ const content = {
     nas: 'NAS',
     dashboard: 'Dashboard',
     menu: 'Menu',
+    username: 'Usuário',
+    password: 'Senha',
     signOut: 'Sair',
     lightMode: 'Tema Claro',
     darkMode: 'Tema Escuro',
@@ -11,7 +13,10 @@ const content = {
   message: {
     menuGreeting: 'Olá 👋',
   },
-  example: {},
+  example: {
+    username: 'mary01,jhon@gmail.com',
+    password: '********',
+  },
 };
 
 export default content;

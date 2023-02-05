@@ -4,8 +4,10 @@ import {
   faAngleDoubleLeft,
   faChartSimple,
   faEthernet,
+  faLock,
   faMoon,
   faSun,
+  faUser,
   faUsers,
   faRightToBracket,
 } from '@fortawesome/free-solid-svg-icons';
@@ -14,8 +16,10 @@ library.add(
   faAngleDoubleLeft,
   faChartSimple,
   faEthernet,
+  faLock,
   faMoon,
   faSun,
+  faUser,
   faUsers,
   faRightToBracket
 );
