@@ -42,7 +42,7 @@ import VFormButton from '@/common/components/form/buttons/VFormButtonLeftIcon.vu
 import StyleFactory from '@/common/components/factory/StyleFactory';
 
 export default defineComponent({
-  name: 'TheSignIn',
+  name: 'TheLoginSignIn',
   components: {
     LoginModal,
     VFormFieldLeftIconInputText,

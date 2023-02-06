@@ -1,6 +1,8 @@
 import MainPage from '../views/MainPage.vue';
 import UserLoginPage from '../views/UserLoginPage.vue';
 
+import loginRouter from './login';
+
 const routes = [
   {
     path: '/',
@@ -9,8 +11,9 @@ const routes = [
   },
   {
     path: '/signin',
-    name: 'Sign In',
+    name: 'Signin',
     component: UserLoginPage,
+    children: loginRouter,
   },
 ];
 
