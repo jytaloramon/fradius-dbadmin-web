@@ -1,42 +1,40 @@
 <template>
-  <login-modal>
-    <div class="text-center">
-      <h2 class="text-base font-bold">{{ $t('message.loginTitle') }}</h2>
-      <h3 class="mt-2 text-base">{{ $t('message.welcome') }}</h3>
-    </div>
-
-    <div
-      class="mt-3 py-2 text-center text-sm before:float-left before:w-[130px] before:mt-3 before:border-dashed before:border-[1px] after:float-right after:w-[130px] after:mt-3 after:border-dashed after:border-[1px]"
-    >
-      {{ $t('label.logIn') }}
-    </div>
-
-    <form>
-      <v-form-field-left-icon-input-text
-        :input-field-prop="form.username"
-        @input-update="setUsername"
-      />
-
-      <v-form-field-left-icon-input-text
-        :input-field-prop="form.password"
-        @input-update="setPassword"
-      />
-
-      <div class="mt-2.5 ml-1 text-xs text-gray-600">
-        <a href=""> {{ $t('label.forgotYourPassword') }}? </a>
+  <login-box :login-box-prop="box">
+    <template v-slot:header>
+      <div class="text-center">
+        <h2 class="text-base font-bold">{{ $t('message.loginTitle') }}</h2>
+        <h3 class="mt-2 text-base">{{ $t('message.welcome') }}</h3>
       </div>
+    </template>
 
-      <div class="mt-6 text-center">
-        <v-form-button :button-left-icon-prop="form.submitButton" />
-      </div>
-    </form>
-  </login-modal>
+    <template v-slot:main>
+      <form>
+        <v-form-field-left-icon-input-text
+          :input-field-prop="form.username"
+          @input-update="setUsername"
+        />
+
+        <v-form-field-left-icon-input-text
+          :input-field-prop="form.password"
+          @input-update="setPassword"
+        />
+
+        <div class="mt-2.5 ml-1 text-xs text-gray-600">
+          <a href=""> {{ $t('label.forgotYourPassword') }}? </a>
+        </div>
+
+        <div class="mt-6 text-center">
+          <v-form-button :button-left-icon-prop="form.submitButton" />
+        </div>
+      </form>
+    </template>
+  </login-box>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import LoginModal from './LoginModal.vue';
+import LoginBox from './LoginBox.vue';
 import VFormFieldLeftIconInputText from '@/common/components/form/input/VFormFieldLeftIconInputText.vue';
 import VFormButton from '@/common/components/form/buttons/VFormButtonLeftIcon.vue';
 import StyleFactory from '@/common/components/factory/StyleFactory';
@@ -44,12 +42,18 @@ import StyleFactory from '@/common/components/factory/StyleFactory';
 export default defineComponent({
   name: 'TheLoginSignIn',
   components: {
-    LoginModal,
+    LoginBox,
     VFormFieldLeftIconInputText,
     VFormButton,
   },
   data() {
     return {
+      box: {
+        divider: {
+          style: StyleFactory.create(['before:w-[130px]', 'after:w-[130px]']),
+          text: this.$t('label.logIn'),
+        },
+      },
       form: {
         username: {
           style: StyleFactory.create(['mt-9', 'border-gray-600']),
