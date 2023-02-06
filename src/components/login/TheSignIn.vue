@@ -1,14 +1,14 @@
 <template>
   <login-modal>
     <div class="text-center">
-      <h2 class="text-base font-bold">Faça login na sua conta</h2>
-      <h3 class="mt-1 text-base">Bem Vindo</h3>
+      <h2 class="text-base font-bold">{{ $t('message.loginTitle') }}</h2>
+      <h3 class="mt-2 text-base">{{ $t('message.welcome') }}</h3>
     </div>
 
     <div
-      class="m-1 py-2 text-center before:float-left before:w-[140px] before:mt-3 before:border-dashed before:border-[1px] after:float-right after:w-[140px] after:mt-3 after:border-dashed after:border-[1px]"
+      class="mt-3 py-2 text-center text-sm before:float-left before:w-[130px] before:mt-3 before:border-dashed before:border-[1px] after:float-right after:w-[130px] after:mt-3 after:border-dashed after:border-[1px]"
     >
-      Sing In
+      {{ $t('label.logIn') }}
     </div>
 
     <form>
@@ -21,6 +21,10 @@
         :input-field-prop="form.password"
         @input-update="setPassword"
       />
+
+      <div class="mt-8 text-center">
+        <v-form-button :button-left-icon-prop="form.submitButton" />
+      </div>
     </form>
   </login-modal>
 </template>
@@ -30,6 +34,7 @@ import { defineComponent } from 'vue';
 
 import LoginModal from './LoginModal.vue';
 import VFormFieldLeftIconInputText from '@/common/components/form/input/VFormFieldLeftIconInputText.vue';
+import VFormButton from '@/common/components/form/buttons/VFormButtonLeftIcon.vue';
 import StyleFactory from '@/common/components/factory/StyleFactory';
 
 export default defineComponent({
@@ -37,10 +42,10 @@ export default defineComponent({
   components: {
     LoginModal,
     VFormFieldLeftIconInputText,
+    VFormButton,
   },
   data() {
     return {
-      k: '',
       form: {
         username: {
           style: StyleFactory.create(['mt-9', 'border-gray-600']),
@@ -76,6 +81,19 @@ export default defineComponent({
             icon: 'fa-solid fa-lock',
             size: 'xs',
             color: 'black',
+          },
+        },
+        submitButton: {
+          type: 'button',
+          style: StyleFactory.create(['text-white', 'bg-green-600']),
+          text: this.$t('label.signIn'),
+          actionClick: () => {},
+          boxIcon: {
+            picture: {
+              icon: 'fa-solid fa-right-to-bracket',
+              size: 'sm',
+              color: 'white',
+            },
           },
         },
       },
