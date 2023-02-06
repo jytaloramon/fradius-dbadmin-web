@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen font-sans">
+  <div class="w-screen h-screen flex bg-slate-50 font-sans">
     <router-view></router-view>
   </div>
 </template>

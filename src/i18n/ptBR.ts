@@ -8,6 +8,7 @@ const content = {
     password: 'Senha',
     signIn: 'Entrar',
     signOut: 'Sair',
+    forgotYourPassword: 'Esqueceu sua senha',
     logIn: 'Conecte-se',
     lightMode: 'Tema Claro',
     darkMode: 'Tema Escuro',

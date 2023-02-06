@@ -22,7 +22,13 @@
         @input-update="setPassword"
       />
 
-      <div class="mt-8 text-center">
+      <div class="mt-2.5 ml-1 text-xs text-gray-600">
+        <a href="">
+          {{ $t('label.forgotYourPassword') }}
+        </a>
+      </div>
+
+      <div class="mt-6 text-center">
         <v-form-button :button-left-icon-prop="form.submitButton" />
       </div>
     </form>
