@@ -5,7 +5,7 @@ import TheLoginRecoverPassword from '../components/login/TheLoginRecoverPassword
 
 const routes: RouteRecordRaw[] = [
   { path: '', component: TheLoginSignIn },
-  { path: 'recovery', component: TheLoginRecoverPassword },
+  { path: 'recover', component: TheLoginRecoverPassword },
 ];
 
 export default routes;

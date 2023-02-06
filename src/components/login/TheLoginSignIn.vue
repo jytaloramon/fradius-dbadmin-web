@@ -20,7 +20,9 @@
         />
 
         <div class="mt-2.5 ml-1 text-xs text-gray-600">
-          <a href=""> {{ $t('label.forgotYourPassword') }}? </a>
+          <router-link to="signin/recover">
+            {{ $t('label.forgotYourPassword') }}
+          </router-link>
         </div>
 
         <div class="mt-6 text-center">
