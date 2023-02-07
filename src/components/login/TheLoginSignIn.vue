@@ -21,7 +21,7 @@
 
         <div class="mt-2.5 ml-1 text-xs text-gray-600">
           <router-link to="signin/recover">
-            {{ $t('label.forgotYourPassword') }}
+            {{ $t('label.forgotYourPassword') }}?
           </router-link>
         </div>
 
