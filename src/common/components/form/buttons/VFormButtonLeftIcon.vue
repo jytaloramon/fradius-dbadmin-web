@@ -37,7 +37,7 @@ export default defineComponent({
   data() {
     return {
       boxIcon: {
-        style: StyleFactory.create(['px-1']),
+        style: StyleFactory.create(['px-2']),
       },
     };
   },

@@ -32,7 +32,14 @@ export default defineComponent({
   setup() {},
   data() {
     return {
-      style: StyleFactory.create(['w-full', 'p-3', 'text-base', 'rounded-lg']),
+      style: StyleFactory.create([
+        'w-full',
+        'flex',
+        'justify-center',
+        'p-3',
+        'text-base',
+        'rounded-lg',
+      ]),
     };
   },
   computed: {
