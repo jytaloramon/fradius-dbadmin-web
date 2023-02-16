@@ -2,27 +2,23 @@
   <v-table-header-item :header-item-prop="headerItemProp">
     <template v-slot:right>
       <span :class="headerItemProp.boxIcon.style">
-        <div :class="headerItemProp.boxIcon.boxIconUp.style">
-          <button type="button">
-            <font-awesome-icon
-              :icon="headerItemProp.boxIcon.boxIconUp.picture.icon"
-              :size="headerItemProp.boxIcon.boxIconUp.picture.size"
-              :color="headerItemProp.boxIcon.boxIconUp.picture.color"
-              :rotation="headerItemProp.boxIcon.boxIconUp.picture.rotation"
-            />
-          </button>
-        </div>
+        <button type="button">
+          <font-awesome-icon
+            :icon="headerItemProp.boxIcon.pictureUp.icon"
+            :size="headerItemProp.boxIcon.pictureUp.size"
+            :color="headerItemProp.boxIcon.pictureUp.color"
+            :rotation="headerItemProp.boxIcon.pictureUp.rotation"
+          />
+        </button>
 
-        <div :class="headerItemProp.boxIcon.boxIconDown.style">
-          <button type="button">
-            <font-awesome-icon
-              :icon="headerItemProp.boxIcon.boxIconDown.picture.icon"
-              :size="headerItemProp.boxIcon.boxIconDown.picture.size"
-              :color="headerItemProp.boxIcon.boxIconDown.picture.color"
-              :rotation="headerItemProp.boxIcon.boxIconDown.picture.rotation"
-            />
-          </button>
-        </div>
+        <button type="button">
+          <font-awesome-icon
+            :icon="headerItemProp.boxIcon.pictureDown.icon"
+            :size="headerItemProp.boxIcon.pictureDown.size"
+            :color="headerItemProp.boxIcon.pictureDown.color"
+            :rotation="headerItemProp.boxIcon.pictureDown.rotation"
+          />
+        </button>
       </span>
     </template>
   </v-table-header-item>

@@ -5,13 +5,7 @@ import type { IFaFont } from '@/common/components/interfaces/IFaFont';
 export interface IVTableHeaderItemRightIcon extends IVTableHeaderItem {
   boxIcon: {
     style?: IStyle;
-    boxIconUp: {
-      style?: IStyle;
-      picture: IFaFont;
-    };
-    boxIconDown: {
-      style?: IStyle;
-      picture: IFaFont;
-    };
+    pictureUp: IFaFont;
+    pictureDown: IFaFont;
   };
 }
