@@ -2,7 +2,7 @@
   <v-table-header-item :header-item-prop="headerItemProp">
     <template v-slot:right>
       <span :class="headerItemProp.boxIcon.style">
-        <button type="button">
+        <button type="button" @click="() => $emit('clickSortButton')">
           <font-awesome-icon
             :icon="headerItemProp.boxIcon.pictureUp.icon"
             :size="headerItemProp.boxIcon.pictureUp.size"

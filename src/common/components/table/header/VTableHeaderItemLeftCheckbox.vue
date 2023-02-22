@@ -2,7 +2,11 @@
   <v-table-header-item :header-item-prop="headerItemProp">
     <template v-slot:left>
       <span :class="headerItemProp.boxCheckbox.style">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          :value="headerItemProp.isChecked"
+          @input="(event) => $emit('input', event.target?.value)"
+        />
       </span>
     </template>
   </v-table-header-item>
