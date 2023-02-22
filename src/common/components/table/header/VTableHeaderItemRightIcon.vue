@@ -10,15 +10,6 @@
             :rotation="headerItemProp.boxIcon.pictureUp.rotation"
           />
         </button>
-
-        <button type="button">
-          <font-awesome-icon
-            :icon="headerItemProp.boxIcon.pictureDown.icon"
-            :size="headerItemProp.boxIcon.pictureDown.size"
-            :color="headerItemProp.boxIcon.pictureDown.color"
-            :rotation="headerItemProp.boxIcon.pictureDown.rotation"
-          />
-        </button>
       </span>
     </template>
   </v-table-header-item>
