@@ -1,7 +1,7 @@
 <template>
-  <th :class="rowProp.style">
+  <tr :class="rowProp.style">
     <slot></slot>
-  </th>
+  </tr>
 </template>
 
 <script lang="ts">
