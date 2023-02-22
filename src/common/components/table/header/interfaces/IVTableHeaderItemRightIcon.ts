@@ -6,6 +6,5 @@ export interface IVTableHeaderItemRightIcon extends IVTableHeaderItem {
   boxIcon: {
     style?: IStyle;
     pictureUp: IFaFont;
-    pictureDown: IFaFont;
   };
 }
